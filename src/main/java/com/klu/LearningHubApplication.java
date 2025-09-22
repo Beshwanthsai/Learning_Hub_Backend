@@ -1,13 +1,12 @@
-package com.klu;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 @SpringBootApplication
-public class LearningHubApplication {
+public class LearningHubApplication extends SpringBootServletInitializer {
 
-	public static void main(String[] args) {
-		SpringApplication.run(LearningHubApplication.class, args);
-	}
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(LearningHubApplication.class);
+    }
 
+    public static void main(String[] args) {
+        SpringApplication.run(LearningHubApplication.class, args);
+    }
 }
