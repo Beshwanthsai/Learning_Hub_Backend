@@ -16,7 +16,7 @@
 	<name>LearningHub</name>
 	<description>Demo project for Spring Boot</description>
 
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	
 	<url/>
 	<licenses>
