@@ -6,13 +6,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
-
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOriginPatterns("*")   // Allow all origins
-                .allowedMethods("*")          // Allow GET, POST, PUT, DELETE, etc.
-                .allowedHeaders("*")          // Allow all headers
-                .allowCredentials(true);      // Allow cookies/auth headers
+                .allowedOriginPatterns("*") // or your EC2 IP like "http://50.17.70.148:9090"
+                .allowedMethods("*")
+                .allowedHeaders("*")
+                .allowCredentials(true);
     }
 }
